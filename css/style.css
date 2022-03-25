@@ -21,6 +21,7 @@ header{
 .hidden{transform: translatey(-100%);}
 .headerbg{
     background: #fff;
+    border-bottom: 1px solid #ddd;
 }
 .headerbg .colorhd{opacity: 1;}
 .headerbg>nav>ul>li>a{color: #333;}
@@ -33,10 +34,10 @@ nav{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    
+    font-size: 1.1rem;
 }
 .nav_logo{
-    width: 10%;
+    width: 120px;
     position: relative;
     cursor:pointer;
 }
@@ -47,17 +48,39 @@ nav{
     opacity:0;
 }
 .nav_menu{
-    width: 60%;
+    width: 65%;
     display: flex;
     justify-content: space-between;
 }
+.nav_menu>ul{height:100%;}
+.nav_menu>li{
+    position:relative;
+}
 .nav_menu>li>a{
-    padding: 10px;
+    padding: 37px 17px;
     color: #fff;
     font-weight: 400;
 }
+.menu_inner_bg{
+    width:100%;
+    background: #fff;
+    height: 220px;
+    box-shadow: 0px 2px 3px 0px #ccc;
+    display: none;
+}
+.menu_inner{
+    width:100%;
+    background:#fff;
+    position:absolute;
+    top:80px;
+    left:0px;
+    text-align:center;
+    font-size: 1rem;
+    display: none;
+}
+.menu_inner>li{margin-bottom:7px;}
 .nav_remain{
-    width: 15%;
+    width: 14%;
     display: flex;
     color: #fff;
     justify-content: space-between;
