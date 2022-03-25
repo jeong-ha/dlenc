@@ -52,8 +52,13 @@ $(window).on('scroll',function(){
     lastScrollTop = st;
 };
 
-
-
+//서브메뉴
+$('.nav_menu>li').mouseover(function(){
+    $('.menu_inner, .menu_inner_bg').show();
+});
+$('header').mouseover(function(){
+    $(this).addClass('headerbg');
+});
     
     
     
