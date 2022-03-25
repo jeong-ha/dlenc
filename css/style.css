@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 ul, li{list-style-type: none;}
 a{color: #333; text-decoration: none;}
@@ -36,20 +37,30 @@ nav{
 .nav_menu>li>a{
     padding: 10px;
     color: #fff;
+    font-weight: 300;
 }
 .nav_remain{
     width: 15%;
     display: flex;
     color: #fff;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .nav_remain a{color: #fff;}
-
+.nav_remain>span:nth-child(2){user-select: none;}
+.nav_remain>span:nth-child(3){cursor:pointer;}
+.fullmenu{
+    width:20px;
+    height:20px;
+    background: url(../img/header_menu_white.png) no-repeat center center / cover;
+    margin-top: 2px;
+    cursor: pointer;
+}
 /*메인표지*/
 .main_video{
     width: 100%;
     height: 100vh;
     background: url(../img/video.jpg) no-repeat center center / cover;
+    background-attachment: fixed;
 }
 
 /*사업영역*/
@@ -65,9 +76,12 @@ nav{
 .index_title>h2{
     font-size: 2rem;
     color: #333;
+    font-weight:600;
 }
 .index_title>p{
     color:#555;
+    font-size: 1.3rem;
+    font-weight: 300;
 }
 .business{
     display: flex;
@@ -91,100 +105,273 @@ nav{
 .business_txt{
     position: absolute;
     width: 100%;
-    top:30px;
+    top:50px;
     text-align: center;
     color: white;
     
+}
+.business_txt>h2{
+    position: relative;
+    margin-bottom: 26px;
+}
+.business_txt>h2:after{
+    content:"";
+    width: 26px;
+    height: 4px;
+    background: #fff;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
 }
 
 /*주요프로젝트*/
 .project_wrap{
     padding: 50px 0;
 }
+.pj{
+    width: 100%;
+    height: 700px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    overflow: visible;
+}
 .project{
     width: 1200px;
-    height: 800px;
-    background-color: darkblue;
-    margin: 0 auto;
+    height: 550px;
+    background: black;
+    position:relative;
+    cursor: pointer;
 }
-
+.now{
+    min-width: 1200px;
+    height: 600px;
+    margin:0 36px;
+}
+.prei{margin-top: 25px;}
+.project_caption{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    height:50px;
+    background:rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    user-select: none;
+}
+.project_title{
+    float: left;
+}
+.project_num{
+    float: right;
+}
+.pjpager{
+    width: 1200px;
+    position: absolute;
+    bottom: 0px;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.pager{
+    height: 90px;
+    width: 19.5%;
+    cursor: pointer;
+    overflow: hidden;
+}
 /*회사정보*/
 .about_wrap{
     width: 1200px;
     margin: 0 auto;
-    padding: 50px 0 80px 0;
+    padding: 50px 0 100px 0;
+}
+.about_wrap>.index_title{
+    margin-bottom: 12px;
 }
 .news{
     margin-bottom: 12px;
 }
-.news_title{}
-.news_title>h3{
+.news_title{
+    height: 30px;
+    margin-bottom: 12px;
+}
+.news_title>h2{
     float: left;
+    padding-left: 12px;
+    color: #333;
+    font-weight: 500;
 }
 .news_plus{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     float: right;
-    background: darkblue;
+    background: #0083bf;
     color: #fff;
     text-align: center;
     user-select: none;
     cursor:pointer;
     font-weight: bold;
-    font-size: 26px;
-    line-height: 26px;
+    font-size: 23px;
+    line-height: 20px;
+    margin-top: 4px;
+    margin-right: 12px;
 }
-.news_article{clear: both;}
-.article_line{
+.news_article{
+    clear: both;
     display: flex;
     justify-content: space-between;
-    font-size: 1.5rem;
+}
+.article_line{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
     margin-bottom: 12px;
+    width: 32.4%;
+    padding: 12px;
+    box-shadow: 0 0 3px #aaa;
+    min-height: 360px;
+    cursor:pointer;
 }
-.article_line>span:first-child{
+.article_line:hover {
+}
+.article_img{
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+.article_img>img{
+    height: 218px;
+    border:1px solid #ccc;
+}
+.article_txt{padding: 6px;}
+.article_txt>span:first-child{
+    color: #0083bf;
+    font-size: 1rem;
+    float: left;
+    font-weight:600;
+}
+.article_txt>span:nth-child(2){
     font-size:1rem;
-    line-height: 40px;
+    color: #888;
+    float:right;
 }
+.article_txt>h3{
+    padding: 10px 0;
+    clear: both;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 300;
+}
+/*삭제
 .about_company{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    color: white;
 }
-.inre{
-    width:49%;
+.invest{
+    width:49.8%;
     height: 250px;
-    float: left;
-    background-color: darksalmon;
+    background: url(../img/invest2.jpg) no-repeat center center / cover;
 }
-
-/*지속가능경영*/
-.esg_wrap{
+.inre_txt{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    cursor:pointer;
+    user-select: none;
+}
+.inre_txt>h2{
+    font-size:2.7rem;
+    margin-bottom: 6px;
+}
+.inre_txt>span{
+    position:relative;
+    font-weight: bold;
+}
+.inre_txt>span:after{
+    content:"";
+    bottom: -20px;
+    left: 0px;
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    position:absolute;
+}
+.inre_txt>p{
+    padding-top: 36px;
+}
+.recruit{
+    width:49.8%;
+    height: 250px;
+    background: url(../img/recruit3.jpg) no-repeat center center / cover;
+}
+*/
+/*경영영역*/
+.mana_wrap{
     padding: 50px 0;
-    background: url(../img/video.jpg) no-repeat center center / cover;
+    background: url(../img/esg_bg2.jpg) no-repeat center center / cover;
 }
-.esg{
+.mana_wrap>.index_title{
+    margin: 0 auto;
+    margin-bottom: 36px;
+}
+.mana_wrap>.index_title>h2{
+    background: #001546;
+    color: #fff;
+    padding: 4px 6px 8px 6px;
+    width: 24%;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+.mana_wrap>.index_title>p{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.mana{
     width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
-.esg_icon{
+.mana_icon{
     width: 250px;
     height: 250px;
     border-radius: 1000px;
     background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    cursor: pointer;
 }
-
+.ir{background:url(../img/ir3.jpg) no-repeat center center / cover;}
+.ss{background:url(../img/env.jpg) no-repeat center center / cover;}
+.re{background:url(../img/re.jpg) no-repeat center center / cover;}
+.mana_icon>span{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 46px;
+    
+}
 /*푸터영역*/
 footer{
     width:100%;
     height: 150px;
-    background: darkblue;
+    background: #001546;
     color: white;
 }
 .footer_up{
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid darkorange;
+    border: 1px solid #172b5a;
+    border-right: 0px;
+    border-left: 0px;
 }
 
 
