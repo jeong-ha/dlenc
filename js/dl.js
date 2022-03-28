@@ -52,16 +52,32 @@ $(window).on('scroll',function(){
     lastScrollTop = st;
 };
 
-//서브메뉴
+//서브메뉴 오픈
 $('.nav_menu>li').mouseover(function(){
-    $('.menu_inner, .menu_inner_bg').show();
+    $('.menu_inner, .menu_inner_bg').addClass('menu_open');
 });
+$('.menu_inner_bg').mouseout(function(){
+    $('.menu_inner, .menu_inner_bg').removeClass('menu_open');
+})
 $('header').mouseover(function(){
     $(this).addClass('headerbg');
 });
     
+//사이트맵
+$('.fullmenu').click(function(){
+    $('.site_map').show();
+});
+$('.site_map_close').click(function(){
+    $('.site_map').hide();
+});
+$(document).keyup(function(e) {
+ if (e.keyCode == 27) { //esc의 아스키코드가 27임
+     $('.site_map').hide();
+}
+});
     
-    
+//이미지 슬라이드
+
     
     
     
