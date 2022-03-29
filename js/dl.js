@@ -75,13 +75,30 @@ $(document).keyup(function(e) {
      $('.site_map').hide();
 }
 });
-    
+        
+});
+
+
 //이미지 슬라이드
 
-    
-    
-    
-    
-    
-    
-});
+ $(document).ready(function() {
+    $('#imageGallery').lightSlider({
+        gallery:true,
+        item:1,
+        loop:true,
+        thumbItem:5,
+        slideMargin:0,
+        enableDrag: true,
+        easing: 'linear',
+        speed: 800,
+        pause: 5000,
+        auto: 'true',
+        currentPagerPosition:'center',
+        onSliderLoad: function(el) {
+            el.lightGallery({
+                selector: '#imageGallery .lslide'
+            });
+        }   
+    });  
+  });
+ 
