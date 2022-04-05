@@ -75,6 +75,31 @@ $(document).keyup(function(e) {
      $('.site_map').hide();
 }
 });
+    
+    
+//모바일 메뉴    
+$('.m_menu_open').click(function(){
+    $('.m_menu').toggleClass('bgbye');
+    $('.m_menu_bar').toggleClass('open');
+    $('html, body').toggleClass('bgbye');
+});
+//모바일 메뉴 li 펼치기(메뉴가 펴지면서 아이콘도 변해야 함)
+$('.m_menu_bar>li>.menu_updown').click(function(){
+    $(this).parent().find('.m_menu_inner').stop().slideToggle(300);
+});
+$('.menu_updown').click(function(){
+    $(this).find('.m_menu_down').toggleClass('downup');
+    $(this).find('.m_menu_up').toggleClass('updown');
+});
+    
+    
+    
+    
+    
+    
+    
+    
+    
         
 });
 
@@ -102,3 +127,20 @@ $(document).keyup(function(e) {
     });  
   });
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
