@@ -246,7 +246,7 @@ video#backvideo{
     transform: translateX(-50%);
     position: absolute;
 }
-
+.business_txt>p{display: none;}
 /*주요프로젝트*/
 .project_wrap{
     padding: 50px 0 100px 0;
