@@ -125,6 +125,7 @@ nav{
     width: 35px;
     height: 35px;
     margin: 8px 60px 0 0;
+    cursor: pointer;
 }
 .site_map_menu{
     display: flex;
@@ -175,6 +176,7 @@ video#backvideo{
     position:absolute;
     top: 0px;
     left: 0px;
+    user-select: none;
 }
 .main_txt{
     width:80%;
