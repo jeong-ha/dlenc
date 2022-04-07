@@ -7,7 +7,7 @@ $(window).scroll(function() {
 });
 
 function fixNav() {
-  var subHeight = $('.sub_title').height();
+  var subHeight = $('.sub_title').height() + $('header').height();
   var scrollTop = $(document).scrollTop();
   console.log(subHeight);
   if (scrollTop >= subHeight) {
@@ -59,8 +59,12 @@ $('.menu_updown').click(function(){
     $(this).find('.m_menu_up').toggleClass('updown');
 });
     
-    
-    
+//서브페이지 사이트맵 siteroad
+$('.sub_site_main').mouseover(function(){
+    $(this).find('.sub_site_sub__').stop().slideDown(500);
+}).mouseout(function(){
+    $(this).find('.sub_site_sub__').stop().slideUp(500);
+});
     
     
     
