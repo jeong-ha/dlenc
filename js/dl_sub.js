@@ -66,7 +66,11 @@ $('.sub_site_main').mouseover(function(){
     $(this).find('.sub_site_sub__').stop().slideUp(500);
 });
     
-    
+  
+//홍보센터 게시판 더보기
+$('.board_more').click(function(){
+    $('.board_index>li:nth-child(5)~li').fadeIn(500);
+});
     
     
     
