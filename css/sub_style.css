@@ -317,7 +317,23 @@ main>div{
     .hr{padding: 80px 20px 40px 20px;}
     .business_sectors{padding: 0 20px;}
 }
+/*768~1023*/
+@media only screen and (max-width:1023px){
+    .business_sectors>p>br{display: none;}
+    .business_sectors{margin-bottom: 50px;}
+    .business_tab{flex-wrap: wrap; justify-content: center;}
+    .tomok{margin-bottom: 8px; width: 31%; margin-right: 6px;}
+    .bus3>.tomok{margin-right: 6px;}
+    .tomok:nth-child(3n){margin-right: 0px;}
+    .tomok span {font-size: 1.2rem;}
+}
+/*480~767*/
+@media only screen and (max-width:767px){
+}
 
+/*360~479*/
+@media only screen and (max-width:479px){
+}
 
 
 
@@ -412,6 +428,7 @@ main>div{
 /*1024~1279*/
 @media only screen and (max-width:1279px){
     .board_index_flex{padding: 30px 20px;}
+    .board_up{padding: 0 20px;}
     .board_txt{padding: 0 0 0 20px;}
 }
 
@@ -429,7 +446,15 @@ main>div{
     .board_img{width: 100%; margin-bottom: 12px;}
     .board_txt{padding: 0px; width: 100%;}
     .board_txt>p{display: none;}
-    .board_up{padding: 0 20px;}
+    .board_up{padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+    .boh{margin-bottom: 20px;}
+    .board_search {width: 365px;}
+    .board_search>select{width: 85px;}
+    .board_search input{width: 190px; margin-right: 0px;}
+}
+
+/*360~479*/
+@media only screen and (max-width:479px){
     .board_search{display: none;}
 }
     
